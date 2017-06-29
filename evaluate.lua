@@ -140,6 +140,7 @@ function TorchModel:predict(img, history, question)
   local iter = #feats.questions+1
 
   img = utils.preprocess(img, 224, 224)
+  img = img:float()
 
   if self.gpuid >= 0 then
       img = img:cuda()

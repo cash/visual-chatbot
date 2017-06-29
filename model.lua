@@ -383,7 +383,8 @@ function Model:generateAnswers(dataloader, params, batch, iter)
 	encInSeq = encInSeq[{{},{iter}}]:squeeze():float()
 
 	-- beams
-	local beams = torch.LongTensor(beamLen, beamSize):zero():cuda();
+	--local beams = torch.LongTensor(beamLen, beamSize):zero():cuda();
+	local beams = torch.LongTensor(beamLen, beamSize):zero()
 
 	-- initial hidden states for the beam at current round of dialog
 	local hiddenBeams = {};
