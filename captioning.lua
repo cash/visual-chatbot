@@ -65,7 +65,7 @@ end
 
 
 function TorchModel:predict(input_image_path, input_sz, input_sz, out_path)
-  print(input_image_path)
+  --print(input_image_path)
   local img = utils.preprocess(input_image_path, input_sz, input_sz)
   img = img:float()
 

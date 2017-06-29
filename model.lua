@@ -364,8 +364,8 @@ function Model:generateAnswers(dataloader, params, batch, iter)
     local beamSize = params.beamSize or 5;
     local beamLen = params.beamLen or 20;
 
-    print('Beam size', beamSize)
-    print('Beam length', beamLen)
+    --print('Beam size', beamSize)
+    --print('Beam length', beamLen)
 
     -- endToken index
     local startToken = dataloader.word2ind['<START>'];
